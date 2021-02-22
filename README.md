@@ -1,5 +1,3 @@
-# ooba-jobs
-
 ## Build Setup
 
 ```bash

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .gradient-brand {
+    background-image: linear-gradient(111.81deg, #ff3c6a -1.02%, #ff3c6a -1.01%, #732c80 116.57%);
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-b from-pink-500 to-pink-600;
+  }
+
+  .gradient-info {
+    @apply bg-gradient-to-b from-gray-300 to-gray-400;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .btn {
+    @apply flex-shrink-0 h-12 px-6 text-sm rounded-md select-none;
+
+    &[disabled=disabled],
+    &-disabled {
+      @apply opacity-50 cursor-not-allowed;
+    }
+
+    &-primary {
+      @apply text-white gradient-primary;
+
+      &:focus {
+        box-shadow:
+          0 74px 80px rgba(237, 100, 166, 0.14),
+          0 37.0361px 40.0391px rgba(237, 100, 166, 0.106447),
+          0 22.3088px 24.1177px rgba(237, 100, 166, 0.0912224),
+          0 14.2967px 15.4559px rgba(237, 100, 166, 0.0799253),
+          0 9.26595px 10.0172px rgba(237, 100, 166, 0.07),
+          0 5.83281px 6.30574px rgba(237, 100, 166, 0.0600747),
+          0 3.35131px 3.62304px rgba(237, 100, 166, 0.0487776),
+          0 1.475px 1.59459px rgba(237, 100, 166, 0.0335534);
+      }
+    }
+
+    &-info {
+      @apply text-gray-700 gradient-info focus:shadow-lg;
+    }
+
+    &-primary-outline {
+      @apply text-pink-600 border border-pink-600;
+    }
+
+    &-info-outline {
+      @apply text-gray-700 border border-gray-600;
+    }
+
+    &-extra-small {
+      @apply h-6 px-3 text-xs;
+    }
+
+    &-small {
+      @apply h-8 px-4 text-sm;
+    }
+
+    &-medium {
+      @apply h-10 px-5 text-base;
+    }
+
+    &-large {
+      @apply h-12 px-8 text-lg font-medium;
+    }
+  }
+
+  .form {
+    @apply flex flex-col space-y-4;
+  }
+
+  .form-group {
+    @apply flex flex-col space-y-2;
+  }
+
+  .form-group-inline {
+    @apply flex flex-row;
+  }
+
+  .form-title {
+    @apply text-xs text-gray-500;
+  }
+
+  .form-field {
+    @apply w-full h-10 px-4 rounded-md ring-1 ring-gray-300 focus:ring-pink-600;
+  }
+
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .perspective-xl {
+    perspective: 1000px;
+  }
+}

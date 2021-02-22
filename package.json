@@ -1,0 +1,48 @@
+{
+  "name": "ooba-job",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "aos": "^3.0.0-beta.6",
+    "core-js": "^3.6.5",
+    "date-fns": "^2.16.1",
+    "dotenv": "^8.2.0",
+    "lodash-es": "^4.17.20",
+    "morphism": "^1.12.3",
+    "nuxt": "^2.14.6",
+    "v-mask": "^2.2.3",
+    "vue-horizontal-list": "^1.3.0",
+    "vue-lazyload": "^1.3.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/google-fonts": "^1.2.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "fibers": "^5.0.0",
+    "postcss": "^7.0.35",
+    "sass": "^1.32.7",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+  }
+}

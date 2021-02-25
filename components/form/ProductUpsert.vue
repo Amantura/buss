@@ -10,7 +10,7 @@
     </div>
     <label class="flex flex-col w-full">
       <span>
-        *Наименования товара {{ pointer + 1 }}
+        *Наименования товара
       </span>
       <input
         v-model="model.name"
@@ -28,7 +28,7 @@
           <input
             v-model="model.quantity"
             required
-            type="text"
+            type="number"
             class="border border-gray-300 rounded-lg outline-none md:mr-2 focus:border-purple-900 focus:shadow-none"
             placeholder="1000" />
         </label>
@@ -39,10 +39,10 @@
             <input
               v-model="model.price"
               required
-              type="text"
+              type="number"
               style="width: 62%"
               class="w-8/12 border-0 border-gray-300 rounded-lg outline-none md:ml-2 focus:shadow-none"
-              placeholder="Сом" />
+            />
             <select
               name="som"
               style="width: 38%"

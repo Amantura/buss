@@ -14,7 +14,7 @@
         <img
           :src="item.icon"
           :alt="item.header"
-          class="my-4 rounded-xl"
+          class="my-6 rounded-xl"
           style="box-shadow: 0 6px 14px -6px rgba(24, 39, 75, 0.12), 0 10px 32px -4px rgba(24, 39, 75, 0.1);" />
         <h3 class="mb-3 text-2xl font-bold">{{ item.header }}</h3>
         <p class="text-xl">{{ item.text }}</p>

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Работа в Ooba.kg',
+  title: 'Business Ooba',
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },

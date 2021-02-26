@@ -1,14 +1,14 @@
 <template>
   <div
-    class="relative flex flex-col w-full pb-10 space-y-4 lg:space-y-0">
+    class="relative flex flex-col w-full pt-6 pb-10 space-y-4 lg:space-y-0">
 
     <div
-      class="absolute top-0 flex items-center justify-center w-10 h-10 bg-purple-200 rounded-full cursor-pointer right-1"
+      class="absolute top-0 z-10 flex items-center justify-center px-4 py-2 font-bold text-purple-900 bg-purple-200 cursor-pointer rounded-xl right-1"
       :class="{'hidden' : pointer === 0}"
       @click="$emit('remove', pointer)">
-      <i class="text-purple-700 far fa-times"></i>
+      Удалить товар
     </div>
-    <label class="flex flex-col w-full">
+    <label class="relative flex flex-col w-full">
       <span>
         *Наименования товара
       </span>
@@ -17,6 +17,9 @@
         required
         type="text"
         class="w-full border-t-0 border-b border-l-0 border-r-0 border-gray-300 focus:border-purple-700" />
+      <div class="absolute text-lg text-purple-800 cursor-pointer right-2 top-8" @click="model.name = ''">
+        <i class="far fa-times"></i>
+      </div>
     </label>
 
     <div class="flex flex-col w-full lg:flex-row">
@@ -34,7 +37,7 @@
         </label>
 
         <label class="flex flex-col w-full md:w-1/2">
-          <span>*Желаемая цена закупки в Китае</span>
+          <span>Желаемая цена закупки в Китае</span>
           <div class="flex overflow-hidden border border-gray-300 rounded-md hover:border-purple-900">
             <input
               v-model="model.price"
@@ -66,7 +69,7 @@
       </div>
       <div class="flex flex-col w-full pl-2 mt-5 lg:w-1/2 form">
         <label class="flex flex-col w-full">
-          <span>*Ссылка на товар</span>
+          <span>Ссылка на товар</span>
           <input
             v-model="model.link"
             required

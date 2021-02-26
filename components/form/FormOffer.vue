@@ -5,81 +5,84 @@
     </h1>
     <hr class="my-5" />
     <form class="lg:text-sm" @submit.prevent="submit">
-      <div class="flex flex-col p-5 space-y-4 rounded-md shadow-sm form lg:space-y-0 md:flex-row md:flex-wrap shadows">
-        <div class="w-full py-4">
-          <h2 class="mb-3">
+      <div class="flex flex-col space-y-2 rounded-md shadow-sm form lg:space-y-0 md:flex-row md:flex-wrap shadows">
+        <div class="w-full py-4" style="box-shadow: 0 2px 4px -2px rgba(24, 39, 75, 0.12), 0 4px 4px -2px rgba(24, 39, 75, 0.08);">
+          <h2 class="px-5 text-lg font-semibold">
             Ваша контактная информация
           </h2>
-          <hr />
         </div>
-        <label for="name" class="flex flex-col w-full md:w-full lg:w-1/3">
-          <span>ФИО*</span>
-          <input
-            id="name"
-            v-model="model.fullname"
-            required
-            type="text"
-            class="border border-gray-300 rounded-lg outline-none lg:mr-2 focus:border-purple-900 focus:shadow-none"
-            style="outline: 0"
-            placeholder="ФИО"
-            name="name" />
-        </label>
+        <div class="flex flex-wrap w-full px-5 py-5 space-y-3 lg:space-y-0 md:space-y-3">
+          <label for="name" class="flex flex-col w-full md:w-full lg:w-1/3">
+            <span>ФИО*</span>
+            <input
+              id="name"
+              v-model="model.fullname"
+              required
+              type="text"
+              class="border border-gray-300 rounded-lg outline-none lg:mr-2 focus:border-purple-900 focus:shadow-none"
+              style="outline: 0"
+              placeholder="Титов Юрий"
+              name="name" />
+          </label>
 
-        <label for="phone" class="flex flex-col w-full md:w-1/2 lg:w-1/3">
-          <span>Номер телефона*</span>
-          <input
-            id="phone"
-            v-model="model.phone"
-            v-mask="'0 (###) ##-##-##'"
-            required
-            type="text"
-            class="border border-gray-300 rounded-lg outline-none md:mr-2 focus:border-purple-900 focus:shadow-none"
-            name="phone"
-            placeholder="0 (___) __-__-__ " />
+          <label for="phone" class="flex flex-col w-full md:w-1/2 lg:w-1/3">
+            <span>Номер телефона*</span>
+            <input
+              id="phone"
+              v-model="model.phone"
+              v-mask="'0 (###) ##-##-##'"
+              required
+              type="text"
+              class="border border-gray-300 rounded-lg outline-none md:mr-2 focus:border-purple-900 focus:shadow-none"
+              name="phone"
+              placeholder="0 (___) __-__-__ " />
 
-        </label>
+          </label>
 
-        <label for="email" class="flex flex-col w-full md:w-1/2 lg:w-1/3">
-          <span>E-mail*</span>
-          <input
-            id="email"
-            v-model="model.email"
-            required
-            type="email"
-            class="border border-gray-300 rounded-lg outline-none focus:border-purple-900 focus:shadow-none"
-            name="email"
-            placeholder="E-mail" />
-        </label>
+          <label for="email" class="flex flex-col w-full md:w-1/2 lg:w-1/3">
+            <span>E-mail</span>
+            <input
+              id="email"
+              v-model="model.email"
+              required
+              type="email"
+              class="border border-gray-300 rounded-lg outline-none focus:border-purple-900 focus:shadow-none"
+              name="email"
+              placeholder="example@gmail.com" />
+          </label>
+        </div>
       </div>
 
-      <div class="flex flex-col p-5 mt-10 space-y-4 rounded-md lg:space-y-0 md:flex-row md:flex-wrap shadows">
-        <div class="w-full py-4">
-          <h2 class="mb-3">
+      <div class="flex flex-col mt-10 space-y-4 rounded-md lg:space-y-0 md:flex-row md:flex-wrap shadows">
+        <div class="w-full py-3" style="box-shadow: 0 2px 4px -2px rgba(24, 39, 75, 0.12), 0 4px 4px -2px rgba(24, 39, 75, 0.08);">
+          <h2 class="px-5 text-lg font-semibold ">
             Товары для поиска
           </h2>
-          <hr />
         </div>
 
-        <ProductUpsert
-          v-for="(product, idx) in model.products"
-          :key="idx"
-          :value="product"
-          :pointer="idx"
-          @openfile="openImg"
-          @update="onProductUpdate"
-          @remove="removeProduct(idx)"
-        />
+        <div class="flex flex-col px-5 pt-5 space-y-4 rounded-md lg:space-y-0 md:flex-row md:flex-wrap">
+          <ProductUpsert
+            v-for="(product, idx) in model.products"
+            :key="idx"
+            :value="product"
+            :pointer="idx"
+            @openfile="openImg"
+            @update="onProductUpdate"
+            @remove="removeProduct(idx)"
+          />
 
 
-        <div class="flex flex-col items-center w-full py-10">
-          <div
-            class="px-5 py-3 text-center text-purple-900 border border-purple-900 cursor-pointer rounded-3xl hover:bg-purple-600 hover:text-white"
-            style="width: 300px"
-            @click="addProduct">
-            <i class="fal fa-plus-circle"></i>
-            Добавить товар
+          <div class="flex flex-col items-center w-full py-10">
+            <div
+              class="px-5 py-3 text-sm text-center text-purple-900 border border-purple-900 cursor-pointer rounded-3xl hover:bg-purple-600 hover:text-white"
+              style="width: 300px"
+              @click="addProduct">
+              <i class="fal fa-plus-circle"></i>
+              Добавить товар ещё один товар
+            </div>
           </div>
         </div>
+
       </div>
       <div class="flex flex-col items-center w-full mb-10">
         <hr class="w-full my-10" />
@@ -148,15 +151,8 @@ export default {
         this.model &&
         this.model.fullname &&
         this.model.phone &&
-        this.model.email &&
         this.model.products &&
         this.model.products.length > 0
-        // this.model.products[0].name.length > 0 &&
-        // this.model.products[0].description.length > 0 &&
-        // this.model.products[0].quantity.length > 0 &&
-        // this.model.products[0].price.length > 0 &&
-        // this.model.products[0].link.length > 0 &&
-        // this.model.products[0].files.length > 0
       )
     }
   },

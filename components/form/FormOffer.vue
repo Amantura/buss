@@ -60,7 +60,7 @@
           </h2>
         </div>
 
-        <div class="flex flex-col px-5 pt-5 space-y-4 rounded-md lg:space-y-0 md:flex-row md:flex-wrap">
+        <div class="flex flex-col pt-5 space-y-4 rounded-md lg:space-y-0 md:flex-row md:flex-wrap">
           <ProductUpsert
             v-for="(product, idx) in model.products"
             :key="idx"
@@ -72,7 +72,7 @@
           />
 
 
-          <div class="flex flex-col items-center w-full py-10">
+          <div class="flex flex-col items-center w-full px-5 py-10">
             <div
               class="px-5 py-3 text-sm text-center text-purple-900 border border-purple-900 cursor-pointer rounded-3xl hover:bg-purple-600 hover:text-white"
               style="width: 300px"
@@ -235,6 +235,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+label > span {
+  margin-bottom: 5px;
+}
+
 input {
   outline: none;
 

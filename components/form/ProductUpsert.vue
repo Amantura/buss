@@ -45,7 +45,6 @@
             <div class="flex overflow-hidden border border-gray-300 rounded-md hover:border-purple-900">
               <input
                 v-model="model.price"
-                required
                 type="number"
                 style="width: 62%"
                 class="w-8/12 border-0 border-gray-300 rounded-lg outline-none md:ml-2 focus:shadow-none"

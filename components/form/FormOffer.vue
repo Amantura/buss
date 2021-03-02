@@ -44,7 +44,6 @@
             <input
               id="email"
               v-model="model.email"
-              required
               type="email"
               class="border border-gray-300 rounded-lg outline-none focus:border-purple-900 focus:shadow-none"
               name="email"

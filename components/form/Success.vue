@@ -1,12 +1,41 @@
 <template>
-  <div class="flex flex-col items-center justify-center py-10 space-y-3 text-black bg-white rounded-md modal">
-    <h1 class="text-xl font-bold">
-      Ваша заяка отправлено!
-    </h1>
+  <div class="z-20 flex flex-col items-center justify-center py-10 space-y-3 text-black bg-white rounded-md modal">
+    <svg
+      width="44"
+      height="44"
+      viewBox="0 0 44 44"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M22 0C9.84658 0 0 9.84502 0 22C0 34.155 9.84658 44 22 44C34.1534 44 44 34.155 44 22C44 9.84502 34.1534 0 22 0ZM22.0006 41.1636C11.4351 41.1636 2.8394 32.5679 2.8394 22C2.8394 11.4322 11.4351 2.83646 22.0006 2.83646C32.5661 2.83646 41.1618 11.4322 41.1618 22C41.1618 32.5679 32.5661 41.1636 22.0006 41.1636ZM30.0009 28.1915C28.0139 30.5722 25.0949 31.9394 21.9992 31.9394C18.9035 31.9394 15.9846 30.5722 13.9975 28.1915C13.4923 27.5865 12.5958 27.5079 12.0018 28.0108C11.3984 28.5215 11.3182 29.4094 11.8242 30.0143C14.3432 33.0394 18.0604 34.7758 21.9992 34.7758C25.938 34.7758 29.6552 33.0394 32.1829 29.9987C32.6889 29.4015 32.6087 28.5058 32.0053 28.0029C31.4026 27.5079 30.5061 27.5865 30.0009 28.1915ZM14.904 20.5778C16.4738 20.5778 17.7428 19.3128 17.7428 17.7414C17.7428 16.1699 16.4738 14.905 14.904 14.905C13.3333 14.905 12.0652 16.1699 12.0652 17.7414C12.0652 19.3128 13.3333 20.5778 14.904 20.5778ZM29.0962 20.5778C30.6668 20.5778 31.9349 19.3128 31.9349 17.7414C31.9349 16.1699 30.6668 14.905 29.0962 14.905C27.5263 14.905 26.2574 16.1699 26.2574 17.7414C26.2574 19.3128 27.5263 20.5778 29.0962 20.5778Z"
+        fill="url(#paint0_linear)" />
+      <defs>
+        <linearGradient
+          id="paint0_linear"
+          x1="-35.2779"
+          y1="52.4147"
+          x2="42.7146"
+          y2="-3.05067"
+          gradientUnits="userSpaceOnUse">
+          <stop stop-color="#4C1286" />
+          <stop offset="1" stop-color="#844FFC" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <h2>
+      Вы успешно заполнили форму
+    </h2>
+    <div class="w-9/12 bg-gray-400" style="height: 1px;"></div>
+    <h2 class="text-xl font-bold text-center">
+      Скоро мы обработаем <br />
+      ваш запрос.
+    </h2>
     <NuxtLink
       to="/"
       class="px-5 py-3 text-white rounded-md bg-linear-fiolet"
-    ><i class="mr-2 far fa-check"></i><span>Перети на главную страницу</span></NuxtLink>
+    ><span>Перейти на главную страницу</span></NuxtLink>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center mt-32 text-center">
+  <div class="flex flex-col items-center hidden mt-32 text-center">
     <h1 class="text-3xl font-bold text-purple-900 lg:text-5xl">
       Тарифы на доставку
     </h1>
@@ -101,9 +101,9 @@
 export default {
   data: () => ({
     items: [
-      { title: 'Авиа', min: 'от 2кг', time: 'от 7-10 дней', price: 'от 10$' },
-      { title: 'Автодорожная', min: 'от 20кг и выше', time: 'от 20-25 дней', price: 'от 1,5$' },
-      { title: 'Железнодорожная', min: 'от 100кг и выше', time: 'от 30 дней', price: 'от 1,5$' },
+      { title: 'Авиа', min: 'от 2кг', time: 'от 7 дней', price: 'от 10$' },
+      { title: 'Автодорожная', min: 'от 20кг и выше', time: 'от 20 дней', price: 'от 2,3$' },
+      { title: 'Железнодорожная', min: 'от 100кг и выше', time: 'от 30 дней', price: 'от 2$' },
     ]
   })
 }

@@ -5,9 +5,9 @@
     </h1>
     <a
       href="https://api.whatsapp.com/send?phone=+996555535511"
-      class="px-5 py-3 text-white rounded-md bg-linear-fiolet"
+      class="flex items-center justify-center w-64 px-5 py-3 text-white rounded-md bg-linear-fiolet"
       target="_blank"><i class="mr-2 fab fa-whatsapp"></i><span>Написать whatsapp</span></a>
-    <a href="tel:+996 555 53 55 11" class="px-5 py-3 text-purple-900 border border-purple-900 rounded-md "><i class="mr-2 far fa-phone"></i><span>+996 555 53 55 11</span></a>
+    <a href="tel:+996 555 53 55 11" class="flex items-center justify-center w-64 px-5 py-3 text-purple-900 border border-purple-900 rounded-md "><i class="mr-2 far fa-phone"></i><span>+996 555 53 55 11</span></a>
   </div>
 </template>
 

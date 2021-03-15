@@ -19,13 +19,14 @@ export default {
     '@/plugins/lazyload',
     '@/plugins/mask',
     '@/plugins/vue-horizontal',
+    '@/plugins/gtags',
     { src: '@/plugins/aos', ssr: false }
   ],
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
   ],
   modules: [
     '@nuxtjs/axios',

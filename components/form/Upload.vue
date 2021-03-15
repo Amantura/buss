@@ -35,7 +35,6 @@
 
     <p class="text-sm text-gray-500 group-hover:text-purple-600">
       <i v-if="uploadPending" class="far fa-spinner-third animate-spin"></i>
-      <i v-else class="far fa-angle-right"></i>
       <span class="ml-2">Загрузить</span>
     </p>
   </label>

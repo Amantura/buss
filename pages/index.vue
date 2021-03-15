@@ -5,7 +5,7 @@
       <AboutBlock />
       <CardBlock />
       <PlusBlock />
-      <ClientBlock />
+      <!-- <ClientBlock /> -->
       <DeliveryBlock />
       <TariffBlock />
     </div>

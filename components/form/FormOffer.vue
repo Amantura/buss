@@ -76,8 +76,8 @@
               class="px-5 py-3 text-sm text-center text-purple-900 border border-purple-900 cursor-pointer rounded-3xl hover:bg-purple-600 hover:text-white"
               style="width: 300px"
               @click="addProduct">
-              <i class="fal fa-plus-circle"></i>
-              Добавить товар ещё один товар
+              <i class="mr-1 fal fa-plus-circle"></i>
+              Добавить ещё один товар
             </div>
           </div>
         </div>

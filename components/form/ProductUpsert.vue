@@ -3,6 +3,7 @@
     <div class="flex justify-between py-2 pl-6 pr-5 text-lg font-semibold bg-gray-100">
       <span class="py-2">Товар <span v-if="pointer != 0">{{ pointer + 1 }}</span></span>
       <div
+        title="Удалить товар"
         class="flex items-center justify-center w-10 h-10 py-2 font-bold cursor-pointer rounded-xl right-1"
         :class="{'hidden' : pointer === 0}"
         @click="$emit('remove', pointer)">
@@ -75,7 +76,6 @@
             <span>Ссылка на товар</span>
             <input
               v-model="model.link"
-              required
               type="text"
               class="border border-gray-300 rounded-lg outline-none focus:border-purple-900 focus:shadow-none"
               placeholder="Ссылка" />
